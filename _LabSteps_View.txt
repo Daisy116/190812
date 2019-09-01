@@ -172,7 +172,7 @@ Route::get('/', "HomeController@index");
 
     <ul>
     @foreach ($scoreList as $score)
-        <li class="{{ ($score < 60) ? 'fail' : '' }}">
+        <li class="{{ ($score < 60) ? 'fail' : '' }}">      // 加上{{ }}才會作邏輯判斷，不然當字串輸出!
             {{$score}}
         </li>
     @endforeach
